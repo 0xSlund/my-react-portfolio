@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
-import { motion } from "framer-motion";
-import { fadeIn } from "../variation";
 import ImgMe from "../assets/IMG_5053.jpg";
 import { TypeAnimation } from "react-type-animation";
 
