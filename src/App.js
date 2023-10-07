@@ -1,8 +1,7 @@
 import Navbar from "./components/navbar";
 import Home from "./components/home";
 import About from "./components/about";
-import Skills from "./components/skills";
-import Projects from "./components/projects";
+import Catalog from "./components/catalog";
 import Contact from "./components/contact";
 
 function App() {
@@ -11,8 +10,7 @@ function App() {
       <Navbar />
       <Home />
       <About />
-      <Skills />
-      <Projects/>
+      <Catalog />
       <Contact/>
     </div>
   );
