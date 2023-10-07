@@ -1,13 +1,8 @@
 import React, { useState } from "react";
-import {
-  FaBars,
-  FaTimes,
-  FaFacebook,
-  FaInstagram,
-  FaYoutube,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import Logo from "../assets/SL-logo.png";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
@@ -15,32 +10,43 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="fixed w-full h-[80px] flex justify-center items-center px-4 bg-[#F0F5F9] text-gray-900">
+    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#F0F5F9] text-gray-900">
+      <div>
+        <img src={Logo} alt="Logo Image" style={{ width: "50px" }} />
+      </div>
+
       {/* menu */}
       <ul className="hidden md:flex">
         <li>
           {" "}
-          <Link to="home" smooth={true} offset={25} duration={400}>
+          <Link to="home" smooth={true} offset={50} duration={400}>
             Home
           </Link>
         </li>
         <li>
-          <Link to="about" smooth={true} offset={5} duration={400}>
+          <Link to="about" smooth={true} offset={50} duration={400}>
             About
           </Link>
         </li>
         <li>
-          <Link to="skills" smooth={true} offset={25} duration={400}>
-            Catalog
+          <Link to="skills" smooth={true} offset={50} duration={400}>
+            Skills
+          </Link>
+        </li>
+        <li>
+          <Link to="projects" smooth={true} offset={50} duration={400}>
+            Projects
+          </Link>
+        </li>
+        <li>
+          <Link to="blog" smooth={true} offset={50} duration={400}>
+            Blog
           </Link>
         </li>
         <li>
           <Link to="contact" smooth={true} offset={50} duration={400}>
             Contact
           </Link>
-        </li>
-        <li>
-          <a href="https://fujn.global/">Visit Fujn</a>
         </li>
       </ul>
 
@@ -57,47 +63,33 @@ const Navbar = () => {
             : "absolute top-0 left-0 w-full h-screen bg-[#F0F5F9] flex flex-col justify-center items-center"
         }
       >
-        <li className="py-4 text-4xl">
-          <Link
-            onClick={handleClick}
-            to="home"
-            smooth={true}
-            offset={50}
-            duration={400}
-          >
+        <li className="py-6 text-4xl">
+          <Link onClick={handleClick} to="home" smooth={true} offset={50} duration={400}>
             Home
           </Link>
         </li>
-        <li className="py-4 text-4xl">
-          <Link
-            onClick={handleClick}
-            to="about"
-            smooth={true}
-            offset={50}
-            duration={400}
-          >
+        <li className="py-6 text-4xl">
+          <Link onClick={handleClick} to="about" smooth={true} offset={50} duration={400}>
             About
           </Link>
         </li>
-        <li className="py-4 text-4xl">
-          <Link
-            onClick={handleClick}
-            to="catalog"
-            smooth={true}
-            offset={50}
-            duration={400}
-          >
-            Catalog
+        <li className="py-6 text-4xl">
+          <Link onClick={handleClick} to="skills" smooth={true} offset={50} duration={400}>
+            Skills
           </Link>
         </li>
-        <li className="py-4 text-4xl">
-          <Link
-            onClick={handleClick}
-            to="contact"
-            smooth={true}
-            offset={50}
-            duration={400}
-          >
+        <li className="py-6 text-4xl">
+          <Link onClick={handleClick} to="projects" smooth={true} offset={50} duration={400}>
+            Projects
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link onClick={handleClick} to="blog" smooth={true} offset={50} duration={400}>
+            Blog
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link onClick={handleClick} to="contact" smooth={true} offset={50} duration={400}>
             Contact
           </Link>
         </li>
@@ -106,37 +98,36 @@ const Navbar = () => {
       {/* socials */}
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
         <ul>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#00B2FF]">
+          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-sky-400">
             <a
               className="flex justify-between items-center w-full text-gray-900"
-              href="https://www.facebook.com/wearefujn"
-            >
-              Facebook <FaFacebook size={30} />
-            </a>
-          </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#C13584]">
-            <a
-              className="flex justify-between items-center w-full text-gray-900"
-              href="https://instagram.com/wearefujn"
-            >
-              Instagram <FaInstagram size={30} />
-            </a>
-          </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#0077B5]">
-            <a
-              className="flex justify-between items-center w-full text-gray-900"
-              href="https://www.linkedin.com/company/fujn"
+              href="https://www.linkedin.com/in/seanlund/"
             >
               Linkedin <FaLinkedin size={30} />
             </a>
           </li>
-
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#FF0000]">
+          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#3333]">
             <a
               className="flex justify-between items-center w-full text-gray-900"
-              href="https://www.youtube.com/channel/UCuzsuaWENbCtp2-xKctjozA"
+              href="https://github.com/0xSlund"
             >
-              YouTube <FaYoutube size={30} />
+              Github <FaGithub size={30} />
+            </a>
+          </li>
+          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#35D0BA]">
+            <a
+              className="flex justify-between items-center w-full text-gray-900"
+              href="mailto:0xslund@gmail.com              "
+            >
+              Mail <HiOutlineMail size={30} />
+            </a>
+          </li>
+          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#FF9234]">
+            <a
+              className="flex justify-between items-center w-full text-gray-900"
+              href=""
+            >
+              Resume <BsFillPersonLinesFill size={30} />
             </a>
           </li>
         </ul>

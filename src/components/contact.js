@@ -5,15 +5,15 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full h-screen bg-[#ffffff] text-black flex justify-center items-center p-4"
+      className="w-full h-screen bg-[#F0F5F9] text-black flex justify-center items-center p-4"
     >
-      <form method="POST" action="https://getform.io/f/86098cd2-9a06-4e18-81e5-cad977601d00" className="flex flex-col max-w-[600px] w-full">
-        <div className="pb-4">
+      <form method="POST" action="https://getform.io/f/30620799-23ea-41de-9556-885d2d010295" className="flex flex-col max-w-[600px] w-full">
+        <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-yellow-600 text-black">
             Contact
           </p>
-          <p className="text-black py-6">
-            Submit the form below or feel free to send me an email - Khadija@fujn.global
+          <p className="text-black py-4">
+            Submit the form below or send me an email - 0xSlund@gmail.com
           </p>
         </div>
         <input
